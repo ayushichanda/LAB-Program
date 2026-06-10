@@ -1,0 +1,232 @@
+//////////////PROGRAM 1//////////////////
+
+\documentclass{article} 
+% Packages 
+\usepackage{fancyhdr} % For header and footer 
+\usepackage{lipsum} % For dummy text 
+% Header and footer settings 
+\pagestyle{fancy} 
+\fancyhf{} 
+\rfoot{\thepage} 
+\lhead{\textit{First Program using LaTex}} 
+\lfoot{\textit{GSSS Institute of Engineering and Technology for Women, 
+Mysuru}} 
+% Document 
+\begin{document} 
+\section{Section 1} 
+\lipsum[1] % Dummy text 
+\section{Section 2} 
+\lipsum[2] % Dummy text 
+\end{document} 
+
+
+
+//////////////////PROGRAM2/////////////
+\documentclass{article} 
+\usepackage{lipsum} 
+\title{Sample Abstract/Summary} 
+\author{} 
+\date{} 
+\begin{document} 
+\maketitle 
+\section*{Abstract} 
+\lipsum[1] 
+\vspace{0.5cm} 
+\lipsum[3] 
+\end{document} 
+
+
+///////////PROGRAM5////////////////
+\documentclass{article} 
+\usepackage{array, booktabs, multicol, multirow} % Load necessary 
+packages 
+\renewcommand{\arraystretch}{1.2} % Adjust vertical spacing in tables 
+\begin{document} 
+\centering 
+\textbf{\Large{Student Details and Marks}} % Title 
+\vspace{0.1in} 
+\begin{table}[h] 
+\centering 
+\begin{tabular}{|c|c|c|c|c|c|} % Define table with 6 columns, all 
+centered 
+\hline 
+\multirow{2}{*}{\textbf{S.No}} & \multirow{2}{*}{\textbf{USN}} & 
+\multirow{2}{*}{\textbf{Student Name}} & 
+\multicolumn{3}{c|}{\textbf{Marks}} \\ % Multirow for headers spanning 
+2 rows, Multicolumn for header "Marks" spanning 3 columns 
+\cline{4-6} % Horizontal line from column 4 to 6 
+& & & \textbf{Subject1} & \textbf{Subject2} & \textbf{Subject3} \\ % 
+Sub-headers for marks 
+\hline 
+\multicolumn{1}{|c|}{1} & \multicolumn{1}{c|}{4XX22XX01} & 
+\multicolumn{1}{c|}{Name 1} & 89 & 60 & 90 \\ % Data rows 
+\hline 
+\multicolumn{1}{|c|}{2} & \multicolumn{1}{c|}{4XX22XX02} & 
+\multicolumn{1}{c|}{Name 2} & 78 & 45 & 98 \\ 
+\hline 
+\multicolumn{1}{|c|}{3} & \multicolumn{1}{c|}{4XX22XX03} & 
+\multicolumn{1}{c|}{Name 3} & 67 & 55 & 59 \\ 
+\hline 
+\end{tabular} 
+\end{table} 
+\end{document}
+
+
+
+
+
+
+/////////////////PROGRAM6/////////////
+\documentclass{article} 
+\usepackage{graphicx} % Required for including images 
+\usepackage{subcaption} % Required for subfigures 
+\begin{document} 
+\begin{figure} 
+\centering 
+\begin{subfigure}{0.46\linewidth} % Subfigure environment for the 
+first image 
+\includegraphics[width=\linewidth]{bus1.jpg} % Include image1.jpg 
+\caption{Caption for image 1} % Caption for the first image 
+\label{fig:subfig1} % Label for referencing the first image 
+\end{subfigure} 
+\hfill % Add horizontal space between subfigures 
+\begin{subfigure}{0.44\linewidth} % Subfigure environment for the 
+second image 
+\includegraphics[width=\linewidth]{bus2.jpg} % Include image2.png 
+\caption{Caption for image 2} % Caption for the second image 
+\label{fig:subfig2} % Label for referencing the second image 
+\end{subfigure} 
+\caption{Combined caption for both images} % Overall caption for the 
+figure 
+\label{fig:subfigures} % Label for referencing the entire figure 
+\end{figure} 
+\end{document}
+
+
+
+//////////////PROGRAM8////////////////////
+\documentclass{article} 
+\usepackage{amsthm} 
+% Define theorem-like environments 
+\newtheorem{theorem}{Theorem}[section] % Theorems numbered within 
+sections 
+\newtheorem{definition}[theorem]{Definition} % Definitions share 
+numbering with theorems 
+\newtheorem{corollary}[theorem]{Corollary} % Corollaries share 
+numbering with theorems 
+\newtheorem{lemma}[theorem]{Lemma} % Lemmas share numbering with 
+theorems 
+\begin{document} 
+\section{Introduction} 
+\begin{theorem} 
+This is a theorem. 
+\end{theorem} 
+\begin{definition} 
+This is a definition. 
+\end{definition} 
+\begin{corollary} 
+This is a corollary. 
+\end{corollary} 
+\begin{lemma} 
+This is a lemma. 
+\end{lemma} 
+\section{Another Section} 
+\begin{theorem} 
+Another theorem. 
+\end{theorem} 
+\end{document}
+
+
+
+
+
+
+
+
+
+////////////////PROGARM10///////////
+\documentclass{article} 
+\usepackage{tikz} 
+\begin{document} 
+\centering 
+% Define styles for nodes 
+\tikzstyle{level 1}=[level distance=4cm, sibling distance=6cm] 
+\tikzstyle{level 2}=[level distance=4cm, sibling distance=3cm] 
+% Begin TikZ picture 
+\begin{tikzpicture}[grow=down, sloped] 
+% Root node 
+\node {Root} 
+% First child 
+child { 
+node {Child 1} % First child node 
+child { 
+node {Subchild 1} % Subchild node 
+} 
+child { 
+node {Subchild 2} % Subchild node 
+} 
+} 
+% Second child 
+child { 
+node {Child 2} % Second child node 
+child { 
+node {Subchild 1} % Subchild node 
+} 
+child { 
+node {Subchild 2} % Subchild node 
+} 
+}; 
+\end{tikzpicture} 
+\end{document}
+
+
+
+
+//////////////////PROGRAM11////////////
+\documentclass{article} 
+\usepackage{algorithm} 
+\usepackage{algpseudocode} 
+ 
+\begin{document} 
+  
+ \begin{algorithm} 
+  \caption{Bubble Sort} 
+  \begin{algorithmic}[1] 
+   \Procedure{BubbleSort}{$A, n$} 
+   \For{$i \gets 0$ to $n-1$} 
+   \For{$j \gets 0$ to $n-1-i$} 
+   \If{$A[j] > A[j+1]$} 
+   \State Swap $A[j]$ and $A[j+1]$ 
+   \EndIf 
+   \EndFor 
+   \EndFor 
+   \EndProcedure 
+  \end{algorithmic} 
+ \end{algorithm} 
+  
+\end{document} 
+
+
+
+
+
+
+/////////////PROGRAM12////////////////
+\documentclass{report} 
+\title{Simple Report} 
+\author{} 
+\date{} 
+\begin{document} 
+\maketitle 
+\tableofcontents 
+\chapter{Introduction} 
+This is the introduction. 
+\chapter{Methods} 
+This is the methods section. 
+\chapter{Results} 
+This is the results section. 
+\chapter{Discussion} 
+This is the discussion section. 
+\chapter{Conclusion} 
+This is the conclusion. 
+\end{document}
